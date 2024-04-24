@@ -23,7 +23,7 @@ class StoreTypeRequest extends FormRequest
     {
         return [
             'title' => 'required | max:255',
-            'description' => 'required | max:5000',
+            'description' => 'nullable | max:5000',
         ];
     }
 
@@ -31,7 +31,6 @@ class StoreTypeRequest extends FormRequest
         return [
             'title.required' => '* Devi inserire un titolo valido',
             'title.max' => '* Il tuo titolo ha superato il numero massimo di caratteri :max caratteri', 
-            'description.required' => '* Devi inserire una descrizione valida',
             'description.max' => '* La tua descrizione ha superato il numero massimo di caratteri :max caratteri', 
         ];
     }
