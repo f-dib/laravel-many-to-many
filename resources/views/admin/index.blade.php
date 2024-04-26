@@ -15,6 +15,13 @@
             <a class="col-3 text-decoration-none py-4 px-2" href="{{ route('admin.types.index') }}">
                 <div class="my-dash-card rounded-4 px-2 py-5 text-center">
                     <h3 class="mb-3">Visita le tue tipologie</h3>
+                    <div class="fw-bold fs-3">{{count($types)}}</div>
+                </div>    
+            </a>
+            <a class="col-3 text-decoration-none py-4 px-2" href="{{ route('admin.technologies.index') }}">
+                <div class="my-dash-card rounded-4 px-2 py-5 text-center">
+                    <h3 class="mb-3">Visita le tue tecnologie</h3>
+                    <div class="fw-bold fs-3">{{count($technologies)}}</div>
                 </div>    
             </a>
         </div>

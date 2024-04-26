@@ -49,6 +49,8 @@ class ProjectController extends Controller
 
         $newProject->save();
 
+        $newProject->technologies()->attach($request->technologies);
+
         return redirect()->route('admin.projects.index');
     }
 
@@ -85,6 +87,8 @@ class ProjectController extends Controller
         $project->update($request->all());
 
         $project->save();
+
+        $project->technologies()->sync($request->technologies);
 
         return redirect()->route('admin.projects.show', $project->id);
     }
